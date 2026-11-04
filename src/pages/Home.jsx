@@ -5,6 +5,8 @@ import axios from 'axios';
 import { HiOutlineLightBulb, HiOutlineHeart, HiHeart, HiOutlineUsers, HiOutlineHome } from 'react-icons/hi';
 import { FaBookOpen, FaPaintBrush, FaLightbulb, FaUsers, FaGraduationCap, FaQuoteLeft, FaCheck, FaTimes } from 'react-icons/fa';
 import SEO from '../components/SEO';
+import DonationSection from '../components/DonationSection';
+import MagazineSection from '../components/MagazineSection';
 
 const API = import.meta.env.VITE_API_URL || 'https://envision.piyushassudani.in/api';
 
@@ -131,16 +133,21 @@ const Home = () => {
             </motion.div>
 
             <motion.img 
-              src="/hero-child.jpg" 
+              src="/hero-child.webp" 
               alt="Happy smiling child learning" 
               className="hero-blob"
+              loading="eager"
+              fetchpriority="high"
+              decoding="async"
+              width="450"
+              height="450"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, type: 'spring' }}
             />
 
             <motion.div 
-              className="floating-card"
+              className="floating-card glass-card"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1 }}
@@ -192,14 +199,16 @@ const Home = () => {
             viewport={{ once: true }}
           >
             <img 
-              src="https://images.unsplash.com/photo-1511629091441-ee46146481b6?auto=format&fit=crop&q=80&w=800" 
+              src="https://images.unsplash.com/photo-1511629091441-ee46146481b6?auto=format&fit=crop&q=75&w=600" 
               alt="Children smiling together" 
               className="about-blob-img" 
+              loading="lazy"
+              decoding="async"
             />
             <div className="floating-text-top" style={{ top: '-10px', right: '10%' }}>
               More Than <br/> Education
             </div>
-            <div className="floating-card" style={{ bottom: '20px', left: '-30px', maxWidth: '280px' }}>
+            <div className="floating-card glass-card" style={{ bottom: '20px', left: '-30px', maxWidth: '280px' }}>
               <div className="floating-card-icon"><FaBookOpen /></div>
               <div className="floating-card-text">Empowering young minds with opportunities.</div>
             </div>
@@ -209,7 +218,7 @@ const Home = () => {
       </section>
 
       {/* ── EXACT DESIGN STATS BANNER ── */}
-      <section className="section bg-light" style={{ padding: '4rem 5%', borderTop: '1px solid #E2E8F0', borderBottom: '1px solid #E2E8F0', backgroundColor: '#FAFCFF' }}>
+      <section className="section bg-mesh" style={{ padding: '4rem 5%', borderTop: '1px solid #E2E8F0', borderBottom: '1px solid #E2E8F0' }}>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '2rem', textAlign: 'center' }}>
           <div className="stat-item" style={{ borderRight: '1px solid #E2E8F0' }}>
             <FaUsers style={{ fontSize: '2rem', color: '#DE9E36', marginBottom: '1rem' }} />
@@ -244,8 +253,8 @@ const Home = () => {
           </p>
 
           <div className="work-grid">
-            <motion.div className="work-card" whileHover={{ y: -10 }}>
-              <img src="https://images.unsplash.com/photo-1511629091441-ee46146481b6?auto=format&fit=crop&q=80&w=800" alt="Education" className="work-card-img" />
+            <motion.div className="work-card glass-card" whileHover={{ y: -10 }}>
+              <img src="https://images.unsplash.com/photo-1511629091441-ee46146481b6?auto=format&fit=crop&q=75&w=500" alt="Education" className="work-card-img" loading="lazy" decoding="async" />
               <div className="work-card-content">
                 <div className="work-card-icon"><FaBookOpen /></div>
                 <h4>Education Support</h4>
@@ -253,8 +262,8 @@ const Home = () => {
               </div>
             </motion.div>
 
-            <motion.div className="work-card" whileHover={{ y: -10 }}>
-              <img src="https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?auto=format&fit=crop&q=80&w=800" alt="Creative Learning" className="work-card-img" />
+            <motion.div className="work-card glass-card" whileHover={{ y: -10 }}>
+              <img src="https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?auto=format&fit=crop&q=75&w=500" alt="Creative Learning" className="work-card-img" loading="lazy" decoding="async" />
               <div className="work-card-content">
                 <div className="work-card-icon"><FaPaintBrush /></div>
                 <h4>Creative Learning</h4>
@@ -262,8 +271,8 @@ const Home = () => {
               </div>
             </motion.div>
 
-            <motion.div className="work-card" whileHover={{ y: -10 }}>
-              <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&q=80&w=800" alt="Skill Development" className="work-card-img" />
+            <motion.div className="work-card glass-card" whileHover={{ y: -10 }}>
+              <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&q=75&w=500" alt="Skill Development" className="work-card-img" loading="lazy" decoding="async" />
               <div className="work-card-content">
                 <div className="work-card-icon"><FaLightbulb /></div>
                 <h4>Skill Development</h4>
@@ -271,8 +280,8 @@ const Home = () => {
               </div>
             </motion.div>
 
-            <motion.div className="work-card" whileHover={{ y: -10 }}>
-              <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&q=80&w=800" alt="Community Outreach" className="work-card-img" />
+            <motion.div className="work-card glass-card" whileHover={{ y: -10 }}>
+              <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&q=75&w=500" alt="Community Outreach" className="work-card-img" loading="lazy" decoding="async" />
               <div className="work-card-content">
                 <div className="work-card-icon"><FaUsers /></div>
                 <h4>Community Outreach</h4>
@@ -285,7 +294,7 @@ const Home = () => {
 
       {/* ── EXACT DESIGN MAKE A DIFFERENCE (ss4) ── */}
       <section className="section" style={{ maxWidth: '1300px', margin: '0 auto' }}>
-        <div className="support-section">
+        <div className="support-section glass-card">
           <div className="about-grid" style={{ gap: '2rem' }}>
             
             <div>
@@ -295,7 +304,7 @@ const Home = () => {
                 Your support helps us educate, empower, and nurture the hidden creativity of underprivileged children. Together, we can give them the opportunities they deserve.
               </p>
               <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
-                <a href="#donate" className="btn-gold" style={{ display: 'inline-flex' }}>
+                <a href="#" onClick={(e) => { e.preventDefault(); window.dispatchEvent(new CustomEvent('open-donation', { detail: { amount: 1000 } })); }} className="btn-gold" style={{ display: 'inline-flex' }}>
                   <HiHeart /> Donate Now &rarr;
                 </a>
                 <Link to="/apply" className="btn-outline-dark" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
@@ -325,8 +334,8 @@ const Home = () => {
         </div>
 
         <div className="impact-grid">
-          <div className="impact-card">
-            <img src="https://images.unsplash.com/photo-1594708767771-a7502209ff51?auto=format&fit=crop&q=80&w=600" className="impact-card-img" alt="Education" />
+          <div className="impact-card glass-card">
+            <img src="https://images.unsplash.com/photo-1594708767771-a7502209ff51?auto=format&fit=crop&q=75&w=500" className="impact-card-img" alt="Education" loading="lazy" decoding="async" />
             <div className="impact-card-content">
               <span className="impact-badge">Education</span>
               <h4>A New Love for Learning</h4>
@@ -334,8 +343,8 @@ const Home = () => {
               <span className="student-name">— Student, Balotra</span>
             </div>
           </div>
-          <div className="impact-card">
-            <img src="https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?auto=format&fit=crop&q=80&w=600" className="impact-card-img" alt="Creative Learning" />
+          <div className="impact-card glass-card">
+            <img src="https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?auto=format&fit=crop&q=75&w=500" className="impact-card-img" alt="Creative Learning" loading="lazy" decoding="async" />
             <div className="impact-card-content">
               <span className="impact-badge">Creative Learning</span>
               <h4>Discovering Hidden Talents</h4>
@@ -343,8 +352,8 @@ const Home = () => {
               <span className="student-name">— Student, Balotra</span>
             </div>
           </div>
-          <div className="impact-card">
-            <img src="https://images.unsplash.com/photo-1511629091441-ee46146481b6?auto=format&fit=crop&q=80&w=600" className="impact-card-img" alt="Community Support" />
+          <div className="impact-card glass-card">
+            <img src="https://images.unsplash.com/photo-1511629091441-ee46146481b6?auto=format&fit=crop&q=75&w=500" className="impact-card-img" alt="Community Support" loading="lazy" decoding="async" />
             <div className="impact-card-content">
               <span className="impact-badge">Community Support</span>
               <h4>A Brighter Tomorrow</h4>
@@ -360,9 +369,11 @@ const Home = () => {
         <div className="about-grid">
           <div style={{ position: 'relative' }}>
             <img 
-              src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&q=80&w=800" 
+              src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&q=75&w=600" 
               alt="Kids walking together" 
               className="about-blob-img"
+              loading="lazy"
+              decoding="async"
               style={{ borderRadius: '30% 70% 70% 30% / 30% 30% 70% 70%' }}
             />
             <div className="floating-text-top" style={{ top: '20px', left: '-30px', transform: 'rotate(-5deg)', fontSize: '2.5rem', lineHeight: '1' }}>
@@ -404,7 +415,7 @@ const Home = () => {
       </section>
 
       {/* ── EXACT DESIGN TESTIMONIALS ── */}
-      <section className="section bg-light" style={{ backgroundColor: '#FAFCFF', borderTop: '1px solid #E2E8F0', borderBottom: '1px solid #E2E8F0' }}>
+      <section className="section bg-mesh" style={{ borderTop: '1px solid #E2E8F0', borderBottom: '1px solid #E2E8F0' }}>
         <div style={{ maxWidth: '1300px', margin: '0 auto' }}>
           <div className="section-header">WHAT PEOPLE SAY</div>
           <div className="testimonials-header">
@@ -424,7 +435,7 @@ const Home = () => {
 
           <div className="testimonials-grid">
             {reviews.length > 0 ? reviews.map((r) => (
-              <div className="testimonial-card" key={r._id}>
+              <div className="testimonial-card glass-card" key={r._id}>
                 <FaQuoteLeft className="quote-icon" />
                 <p>"{r.review}"</p>
                 <span className="testimonial-author">— {r.name || r.role || 'Supporter'}</span>
@@ -438,6 +449,9 @@ const Home = () => {
         </div>
       </section>
 
+      {/* ── ENVISION MAGAZINE & PUBLICATIONS SECTION ── */}
+      <MagazineSection />
+
       {/* ── EXACT DESIGN QUOTE ── */}
       <section className="quote-section">
         <FaQuoteLeft style={{ fontSize: '4rem', color: '#DE9E36', opacity: '0.5', marginBottom: '2rem' }} />
@@ -449,8 +463,10 @@ const Home = () => {
       <section className="section" style={{ paddingTop: 0 }}>
         <div className="journey-card">
           <img 
-            src="https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&q=80&w=800" 
+            src="https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&q=75&w=600" 
             alt="Smiling boy" 
+            loading="lazy"
+            decoding="async"
             style={{ width: '100%', borderRadius: '40% 60% 70% 30% / 40% 50% 60% 50%', objectFit: 'cover', aspectRatio: '4/3' }}
           />
           <div>
@@ -466,6 +482,9 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* ── DONATE SECTION ── */}
+      <DonationSection />
 
       {/* Review Modal */}
       {isReviewModalOpen && (

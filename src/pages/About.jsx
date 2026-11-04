@@ -36,14 +36,16 @@ const About = () => {
             transition={{ duration: 0.6 }}
           >
             <img
-              src="https://images.unsplash.com/photo-1511629091441-ee46146481b6?auto=format&fit=crop&q=80&w=800"
+              src="https://images.unsplash.com/photo-1511629091441-ee46146481b6?auto=format&fit=crop&q=75&w=600"
               alt="Children smiling together"
               className="about-blob-img"
+              loading="lazy"
+              decoding="async"
             />
             <div className="floating-text-top" style={{ top: '-10px', right: '10%' }}>
               More Than <br /> Education
             </div>
-            <div className="floating-card" style={{ bottom: '20px', left: '-30px', maxWidth: '280px' }}>
+            <div className="floating-card glass-card" style={{ bottom: '20px', left: '-30px', maxWidth: '280px' }}>
               <div className="floating-card-icon"><FaBookOpen /></div>
               <div className="floating-card-text">Empowering young minds with opportunities.</div>
             </div>
@@ -52,13 +54,13 @@ const About = () => {
       </section>
 
       {/* Mission & Vision */}
-      <section className="section bg-light" style={{ backgroundColor: '#FDF3DF' }}>
+      <section className="section bg-mesh">
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <div className="section-header center">OUR PILLARS</div>
           <h2 className="section-heading center">What Drives <span className="gold-text">Us Forward</span></h2>
 
           <div className="work-grid" style={{ marginTop: '3rem' }}>
-            <motion.div className="work-card" whileHover={{ y: -10 }}>
+            <motion.div className="work-card glass-card" whileHover={{ y: -10 }}>
               <div style={{ padding: '3rem 2rem', textAlign: 'center' }}>
                 <div style={{ width: '70px', height: '70px', backgroundColor: '#FDF3DF', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.5rem', color: '#DE9E36', fontSize: '2rem' }}>
                   <HiOutlineGlobeAlt />
@@ -68,7 +70,7 @@ const About = () => {
               </div>
             </motion.div>
 
-            <motion.div className="work-card" whileHover={{ y: -10 }}>
+            <motion.div className="work-card glass-card" whileHover={{ y: -10 }}>
               <div style={{ padding: '3rem 2rem', textAlign: 'center' }}>
                 <div style={{ width: '70px', height: '70px', backgroundColor: '#FDF3DF', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.5rem', color: '#DE9E36', fontSize: '2rem' }}>
                   <HiOutlineBookOpen />
@@ -78,7 +80,7 @@ const About = () => {
               </div>
             </motion.div>
 
-            <motion.div className="work-card" whileHover={{ y: -10 }}>
+            <motion.div className="work-card glass-card" whileHover={{ y: -10 }}>
               <div style={{ padding: '3rem 2rem', textAlign: 'center' }}>
                 <div style={{ width: '70px', height: '70px', backgroundColor: '#FDF3DF', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.5rem', color: '#DE9E36', fontSize: '2rem' }}>
                   <HiOutlineHeart />
@@ -88,7 +90,7 @@ const About = () => {
               </div>
             </motion.div>
 
-            <motion.div className="work-card" whileHover={{ y: -10 }}>
+            <motion.div className="work-card glass-card" whileHover={{ y: -10 }}>
               <div style={{ padding: '3rem 2rem', textAlign: 'center' }}>
                 <div style={{ width: '70px', height: '70px', backgroundColor: '#FDF3DF', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.5rem', color: '#DE9E36', fontSize: '2rem' }}>
                   <HiOutlineLightBulb />
@@ -98,6 +100,36 @@ const About = () => {
               </div>
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* Founders Section */}
+      <section className="section" style={{ maxWidth: '1200px', margin: '0 auto', paddingBottom: '4rem' }}>
+        <div className="section-header center">OUR TEAM</div>
+        <h2 className="section-heading center">Meet the <span className="gold-text">Founders</span></h2>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '3rem', justifyContent: 'center', marginTop: '3rem' }}>
+          
+          <motion.div className="work-card glass-card" whileHover={{ y: -10 }} style={{ padding: '2.5rem 2rem', textAlign: 'center', maxWidth: '350px', width: '100%', borderRadius: '20px' }}>
+            <img src="/founder-bhavya.webp" alt="Bhavya Yadav" width="140" height="140" loading="lazy" decoding="async" style={{ width: '140px', height: '140px', borderRadius: '50%', objectFit: 'cover', border: '4px solid #FDF3DF', marginBottom: '1.5rem', boxShadow: '0 10px 20px rgba(0,0,0,0.1)' }} />
+            <h3 style={{ color: '#031533', fontSize: '1.6rem', marginBottom: '0.2rem', fontFamily: 'Playfair Display, serif' }}>Bhavya Yadav</h3>
+            <p style={{ color: '#DE9E36', fontWeight: 'bold', marginBottom: '1rem', letterSpacing: '1px', fontSize: '0.9rem', textTransform: 'uppercase' }}>Co-Founder</p>
+            <p style={{ color: '#5A6A80', marginBottom: '1.5rem', fontSize: '0.95rem', lineHeight: '1.6' }}>Leading the vision to empower underprivileged children with education and holistic growth opportunities.</p>
+            <div style={{ padding: '0.8rem', background: '#F8FAFC', borderRadius: '10px', color: '#031533', fontWeight: '600', fontSize: '0.95rem' }}>
+              📞 +91 95993 01743
+            </div>
+          </motion.div>
+
+          <motion.div className="work-card glass-card" whileHover={{ y: -10 }} style={{ padding: '2.5rem 2rem', textAlign: 'center', maxWidth: '350px', width: '100%', borderRadius: '20px' }}>
+            <img src="/founder-anshika.webp" alt="Anshika Sharma" width="140" height="140" loading="lazy" decoding="async" style={{ width: '140px', height: '140px', borderRadius: '50%', objectFit: 'cover', border: '4px solid #FDF3DF', marginBottom: '1.5rem', boxShadow: '0 10px 20px rgba(0,0,0,0.1)' }} />
+            <h3 style={{ color: '#031533', fontSize: '1.6rem', marginBottom: '0.2rem', fontFamily: 'Playfair Display, serif' }}>Anshika Sharma</h3>
+            <p style={{ color: '#DE9E36', fontWeight: 'bold', marginBottom: '1rem', letterSpacing: '1px', fontSize: '0.9rem', textTransform: 'uppercase' }}>Co-Founder</p>
+            <p style={{ color: '#5A6A80', marginBottom: '1.5rem', fontSize: '0.95rem', lineHeight: '1.6' }}>Driving our mission forward with dedication, strategy, and a passion for sustainable social change.</p>
+            <div style={{ padding: '0.8rem', background: '#F8FAFC', borderRadius: '10px', color: '#031533', fontWeight: '600', fontSize: '0.9rem', display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
+              <span>📞 +91 92894 43439</span>
+              <a href="mailto:envision.foundation.27@gmail.com" style={{ color: 'inherit', textDecoration: 'none' }}>✉️ envision.foundation.27@gmail.com</a>
+            </div>
+          </motion.div>
+
         </div>
       </section>
 
@@ -159,7 +191,7 @@ const About = () => {
             ].map((item, i) => (
               <motion.div
                 key={i}
-                className="work-card"
+                className="work-card glass-card"
                 whileHover={{ y: -8 }}
                 style={{ padding: '2.5rem 2rem', textAlign: 'center' }}
               >

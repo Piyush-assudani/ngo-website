@@ -10,12 +10,12 @@ const Footer = () => {
         
         {/* Brand Section */}
         <div>
-          <img src="/favicon.jpg" alt="EnVision Logo" style={{ width: '120px', borderRadius: '50%', marginBottom: '1rem', border: '1px solid #E2E8F0' }} />
+          <img src="/favicon.webp" alt="EnVision Logo" width="120" height="120" loading="lazy" decoding="async" style={{ width: '120px', borderRadius: '50%', marginBottom: '1rem', border: '1px solid #E2E8F0' }} />
           <p className="footer-desc">
             EnVision Foundation is a non-profit initiative dedicated to educating, empowering, and nurturing the hidden creativity of underprivileged children.
           </p>
           <div className="social-icons">
-            <a href="https://www.instagram.com/envisionfoundation_ngo/" target="_blank" rel="noopener noreferrer" className="social-icon"><FaInstagram /></a>
+            <a href="https://www.instagram.com/envisionfoundation_ngo?psln=MWw4bmRtYXR6cTFlZQ==" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Follow us on Instagram"><FaInstagram /></a>
           </div>
         </div>
 
@@ -28,6 +28,7 @@ const Footer = () => {
             <Link to="/impact" className="footer-link">Our Work</Link>
             <Link to="/apply" className="footer-link">Get Involved</Link>
             <Link to="/gallery" className="footer-link">Gallery</Link>
+            <Link to="/magazines" className="footer-link">Magazines</Link>
             <Link to="/contact" className="footer-link">Contact</Link>
           </div>
         </div>
@@ -53,11 +54,11 @@ const Footer = () => {
             </div>
             <div className="footer-contact-item">
               <HiOutlineMail className="footer-contact-icon" style={{ fontSize: '1.2rem' }} />
-              <span>envisionfoundation@gmail.com</span>
+              <a href="mailto:envision.foundation.27@gmail.com" style={{ color: 'inherit', textDecoration: 'none' }}>envision.foundation.27@gmail.com</a>
             </div>
             <div className="footer-contact-item">
               <HiOutlinePhone className="footer-contact-icon" style={{ fontSize: '1.2rem' }} />
-              <span>+91 9413879444</span>
+              <span>+91 95993 01743</span>
             </div>
           </div>
         </div>

@@ -27,7 +27,7 @@ const Impact = () => {
       </section>
 
       {/* Stats */}
-      <section className="section bg-light" style={{ padding: '4rem 5%', backgroundColor: '#FDF3DF', borderTop: '1px solid #E2E8F0', borderBottom: '1px solid #E2E8F0' }}>
+      <section className="section bg-mesh" style={{ padding: '4rem 5%', borderTop: '1px solid #E2E8F0', borderBottom: '1px solid #E2E8F0' }}>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '2rem', textAlign: 'center', maxWidth: '1100px', margin: '0 auto' }}>
           {stats.map((stat, i) => (
             <motion.div
@@ -50,8 +50,8 @@ const Impact = () => {
       {/* Work Cards */}
       <section className="section" style={{ maxWidth: '1300px', margin: '0 auto' }}>
         <div className="work-grid">
-          <motion.div className="work-card" whileHover={{ y: -10 }}>
-            <img src="https://images.unsplash.com/photo-1511629091441-ee46146481b6?auto=format&fit=crop&q=80&w=800" alt="Education" className="work-card-img" />
+          <motion.div className="work-card glass-card" whileHover={{ y: -10 }}>
+            <img src="https://images.unsplash.com/photo-1511629091441-ee46146481b6?auto=format&fit=crop&q=75&w=500" alt="Education" className="work-card-img" loading="lazy" decoding="async" />
             <div className="work-card-content">
               <div className="work-card-icon"><FaBookOpen /></div>
               <h4>Education Support</h4>
@@ -59,8 +59,8 @@ const Impact = () => {
             </div>
           </motion.div>
 
-          <motion.div className="work-card" whileHover={{ y: -10 }}>
-            <img src="https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?auto=format&fit=crop&q=80&w=800" alt="Creative Learning" className="work-card-img" />
+          <motion.div className="work-card glass-card" whileHover={{ y: -10 }}>
+            <img src="https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?auto=format&fit=crop&q=75&w=500" alt="Creative Learning" className="work-card-img" loading="lazy" decoding="async" />
             <div className="work-card-content">
               <div className="work-card-icon"><FaPaintBrush /></div>
               <h4>Creative Learning</h4>
@@ -68,8 +68,8 @@ const Impact = () => {
             </div>
           </motion.div>
 
-          <motion.div className="work-card" whileHover={{ y: -10 }}>
-            <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&q=80&w=800" alt="Skill Development" className="work-card-img" />
+          <motion.div className="work-card glass-card" whileHover={{ y: -10 }}>
+            <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&q=75&w=500" alt="Skill Development" className="work-card-img" loading="lazy" decoding="async" />
             <div className="work-card-content">
               <div className="work-card-icon"><FaLightbulb /></div>
               <h4>Skill Development</h4>
@@ -77,8 +77,8 @@ const Impact = () => {
             </div>
           </motion.div>
 
-          <motion.div className="work-card" whileHover={{ y: -10 }}>
-            <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&q=80&w=800" alt="Community Outreach" className="work-card-img" />
+          <motion.div className="work-card glass-card" whileHover={{ y: -10 }}>
+            <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&q=75&w=500" alt="Community Outreach" className="work-card-img" loading="lazy" decoding="async" />
             <div className="work-card-content">
               <div className="work-card-icon"><FaUsers /></div>
               <h4>Community Outreach</h4>
@@ -95,8 +95,8 @@ const Impact = () => {
           <h2 className="section-heading" style={{ marginBottom: '3rem' }}>Making a Real <span className="gold-text">Impact</span></h2>
 
           <div className="impact-grid">
-            <div className="impact-card">
-              <img src="https://images.unsplash.com/photo-1594708767771-a7502209ff51?auto=format&fit=crop&q=80&w=600" className="impact-card-img" alt="Read & Lead" />
+            <div className="impact-card glass-card">
+              <img src="https://images.unsplash.com/photo-1594708767771-a7502209ff51?auto=format&fit=crop&q=75&w=500" className="impact-card-img" alt="Read & Lead" loading="lazy" decoding="async" />
               <div className="impact-card-content">
                 <span className="impact-badge">Education</span>
                 <h4>Project Read & Lead</h4>
@@ -104,8 +104,8 @@ const Impact = () => {
                 <span className="student-name">— EnVision Team</span>
               </div>
             </div>
-            <div className="impact-card">
-              <img src="https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?auto=format&fit=crop&q=80&w=600" className="impact-card-img" alt="Art Expression" />
+            <div className="impact-card glass-card">
+              <img src="https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?auto=format&fit=crop&q=75&w=500" className="impact-card-img" alt="Art Expression" loading="lazy" decoding="async" />
               <div className="impact-card-content">
                 <span className="impact-badge">Creative Learning</span>
                 <h4>Annual Art Expression</h4>
@@ -113,8 +113,8 @@ const Impact = () => {
                 <span className="student-name">— Volunteer Team</span>
               </div>
             </div>
-            <div className="impact-card">
-              <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&q=80&w=600" className="impact-card-img" alt="Community Drive" />
+            <div className="impact-card glass-card">
+              <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&q=75&w=500" className="impact-card-img" alt="Community Drive" loading="lazy" decoding="async" />
               <div className="impact-card-content">
                 <span className="impact-badge">Community</span>
                 <h4>Community Learning Drive</h4>
@@ -136,7 +136,7 @@ const Impact = () => {
           <Link to="/apply" className="btn-gold" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
             Get Involved &rarr;
           </Link>
-          <a href="/#donate" className="btn-outline-dark" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
+          <a href="#" onClick={(e) => { e.preventDefault(); window.dispatchEvent(new CustomEvent('open-donation', { detail: { amount: 1000 } })); }} className="btn-outline-dark" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
             <HiHeart /> Donate Now &rarr;
           </a>
         </div>

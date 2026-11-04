@@ -5,17 +5,10 @@ import SEO from '../components/SEO';
 
 const API = import.meta.env.VITE_API_URL || 'https://envision.piyushassudani.in/api';
 
-const fallbackGallery = [
-  { _id: '1', imageUrl: 'https://images.unsplash.com/photo-1594708767771-a7502209ff51?auto=format&fit=crop&q=80&w=600', caption: 'Teaching sessions with love', category: 'Education' },
-  { _id: '2', imageUrl: 'https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?auto=format&fit=crop&q=80&w=600', caption: 'Art and creativity workshops', category: 'Creative Learning' },
-  { _id: '3', imageUrl: 'https://images.unsplash.com/photo-1511629091441-ee46146481b6?auto=format&fit=crop&q=80&w=600', caption: 'Community learning drives', category: 'Community' },
-  { _id: '4', imageUrl: 'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&q=80&w=600', caption: 'Skill building activities', category: 'Education' },
-  { _id: '5', imageUrl: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&q=80&w=600', caption: 'Children walking to school', category: 'Community' },
-  { _id: '6', imageUrl: 'https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&q=80&w=600', caption: 'Community outreach programs', category: 'Events' },
-];
+// No fallback gallery, fetch entirely from database
 
 const Gallery = () => {
-  const [images, setImages] = useState(fallbackGallery);
+  const [images, setImages] = useState([]);
   const [filter, setFilter] = useState('All');
 
   useEffect(() => {
@@ -61,8 +54,13 @@ const Gallery = () => {
           </div>
         </div>
 
-        <div style={{
-          display: 'grid',
+        {images.length === 0 ? (
+          <div style={{ textAlign: 'center', padding: '3rem', color: '#5A6A80' }}>
+            <p>No images uploaded yet. Check back later!</p>
+          </div>
+        ) : (
+          <div style={{
+            display: 'grid',
           gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
           gap: '1.5rem',
         }}>
@@ -85,6 +83,8 @@ const Gallery = () => {
               <img
                 src={item.imageUrl}
                 alt={item.caption || item.title}
+                loading="lazy"
+                decoding="async"
                 style={{
                   width: '100%',
                   height: index % 3 === 0 ? '350px' : '280px',
@@ -116,6 +116,7 @@ const Gallery = () => {
             </motion.div>
           ))}
         </div>
+        )}
 
         {filtered.length === 0 && (
           <div style={{ textAlign: 'center', padding: '4rem', color: '#8892A0' }}>
